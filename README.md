@@ -72,7 +72,26 @@ audio/H*/       pronunciation clips, one MP3 per word, matched by index
 src/            pdf_to_csv.py — the offline PDF -> CSV parser
 assets/         style.css + app.js, loaded by index.html
 index.html      the static page shell
+notebooks/      exploratory data analysis over vocab/*.csv
 ```
+
+## Vocabulary analysis
+
+[`notebooks/analysis.ipynb`](notebooks/analysis.ipynb) digs into the parsed
+data beyond the study page itself:
+
+- word length and part-of-speech mix per level, and how each trends as
+  levels progress
+- data completeness (which level's source PDF is least reliably annotated)
+- which individual characters carry the most "leverage" across the
+  11,000-word list, and which behave as prefixes/suffixes
+- how much of each level is recombined from characters already learned in
+  earlier levels
+- tone distribution, overall and per level
+- homophone collisions — words that share the exact same pinyin
+
+Outputs are pre-run, so it renders with charts directly on GitHub — no need
+to execute it to see the results.
 
 ## Regenerating the vocab CSVs
 
